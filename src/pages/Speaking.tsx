@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Microphone, Clock, List, Info } from "lucide-react";
+import { Clock, List, Info, Mic } from "lucide-react";
 
 const Speaking = () => {
   return (

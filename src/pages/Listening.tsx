@@ -1,3 +1,6 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Clock, List, Info } from "lucide-react";
+
 const Listening = () => {
   return (
     <main className="flex-grow pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
