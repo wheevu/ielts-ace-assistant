@@ -1,5 +1,3 @@
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
 import { useParams } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -25,7 +23,6 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
       question: "The passage discusses labor and work.",
       options: ["True", "False", "Not Given"],
     },
-    // Add more questions as needed
   ],
 };
 
@@ -33,61 +30,57 @@ const PracticeTest = () => {
   const { id } = useParams();
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <div className="container mx-auto px-4 py-8 flex-grow pt-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Reading Passage */}
-          <Card className="h-[calc(100vh-12rem)]">
-            <CardContent className="p-6">
-              <ScrollArea className="h-[calc(100vh-16rem)]">
-                <h2 className="text-2xl font-bold mb-4">{mockTest.title}</h2>
-                <div className="prose max-w-none">
-                  <p className="whitespace-pre-wrap">{mockTest.passage}</p>
-                </div>
-              </ScrollArea>
-            </CardContent>
-          </Card>
+    <div className="container mx-auto px-4 py-8 flex-grow pt-24">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Reading Passage */}
+        <Card className="h-[calc(100vh-12rem)]">
+          <CardContent className="p-6">
+            <ScrollArea className="h-[calc(100vh-16rem)]">
+              <h2 className="text-2xl font-bold mb-4">{mockTest.title}</h2>
+              <div className="prose max-w-none">
+                <p className="whitespace-pre-wrap">{mockTest.passage}</p>
+              </div>
+            </ScrollArea>
+          </CardContent>
+        </Card>
 
-          {/* Questions */}
-          <Card className="h-[calc(100vh-12rem)]">
-            <CardContent className="p-6">
-              <ScrollArea className="h-[calc(100vh-16rem)]">
-                <h2 className="text-2xl font-bold mb-4">Questions</h2>
-                <div className="space-y-6">
-                  {mockTest.questions.map((question) => (
-                    <div key={question.id} className="space-y-3">
-                      <p className="font-medium">
-                        {question.id}. {question.question}
-                      </p>
-                      <div className="space-y-2">
-                        {question.options.map((option, index) => (
-                          <label
-                            key={index}
-                            className="flex items-center space-x-2 cursor-pointer"
-                          >
-                            <input
-                              type={
-                                question.type === "multiple-choice"
-                                  ? "radio"
-                                  : "radio"
-                              }
-                              name={`question-${question.id}`}
-                              className="w-4 h-4"
-                            />
-                            <span>{option}</span>
-                          </label>
-                        ))}
-                      </div>
+        {/* Questions */}
+        <Card className="h-[calc(100vh-12rem)]">
+          <CardContent className="p-6">
+            <ScrollArea className="h-[calc(100vh-16rem)]">
+              <h2 className="text-2xl font-bold mb-4">Questions</h2>
+              <div className="space-y-6">
+                {mockTest.questions.map((question) => (
+                  <div key={question.id} className="space-y-3">
+                    <p className="font-medium">
+                      {question.id}. {question.question}
+                    </p>
+                    <div className="space-y-2">
+                      {question.options.map((option, index) => (
+                        <label
+                          key={index}
+                          className="flex items-center space-x-2 cursor-pointer"
+                        >
+                          <input
+                            type={
+                              question.type === "multiple-choice"
+                                ? "radio"
+                                : "radio"
+                            }
+                            name={`question-${question.id}`}
+                            className="w-4 h-4"
+                          />
+                          <span>{option}</span>
+                        </label>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </ScrollArea>
-            </CardContent>
-          </Card>
-        </div>
+                  </div>
+                ))}
+              </div>
+            </ScrollArea>
+          </CardContent>
+        </Card>
       </div>
-      <Footer />
     </div>
   );
 };

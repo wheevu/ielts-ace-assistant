@@ -16,7 +16,12 @@ export const Navigation = () => {
     <nav className="border-b sticky top-0 bg-background z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold">IELTS Practice</Link>
+          <Link 
+            to="/" 
+            className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent transition-all hover:scale-105"
+          >
+            IELTS Ace
+          </Link>
           
           <div className="flex items-center gap-2">
             <Link to="/vocabulary">
