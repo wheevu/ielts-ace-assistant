@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ChatButton } from "@/components/chat/ChatButton";
 import Index from "./pages/Index";
+import GrammarCheck from "./pages/GrammarCheck";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/grammar-check" element={<GrammarCheck />} />
         </Routes>
       </BrowserRouter>
       <ChatButton />
