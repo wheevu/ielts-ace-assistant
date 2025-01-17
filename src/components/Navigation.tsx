@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { BookOpen } from "lucide-react";
 
-const Navigation = () => {
+export const Navigation = () => {
   return (
     <nav className="border-b">
       <div className="container mx-auto px-4 py-4">
@@ -40,5 +40,3 @@ const Navigation = () => {
     </nav>
   );
 };
-
-export default Navigation;
