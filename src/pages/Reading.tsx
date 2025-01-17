@@ -1,22 +1,18 @@
-import { Navigation } from "@/components/Navigation";
-import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Clock, List, Info } from "lucide-react";
 
 const Reading = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navigation />
-      <main className="flex-grow pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-        <div className="space-y-8 animate-fade-in">
-          <section className="text-center space-y-4">
-            <h1 className="text-4xl font-bold text-primary">IELTS Reading</h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Test your ability to read and understand academic texts with various question types.
-            </p>
-          </section>
+    <main className="flex-grow pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div className="space-y-8 animate-fade-in">
+        <section className="text-center space-y-4">
+          <h1 className="text-4xl font-bold text-primary">IELTS Reading</h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Test your ability to read and understand academic texts with various question types.
+          </p>
+        </section>
 
-          <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
             <Card className="hover:shadow-lg transition-shadow animate-slide-up">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -78,11 +74,9 @@ const Reading = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </main>
   );
 };
 
