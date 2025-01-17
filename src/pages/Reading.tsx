@@ -1,0 +1,89 @@
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { BookOpen, Clock, List, Info } from "lucide-react";
+
+const Reading = () => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-grow pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <div className="space-y-8 animate-fade-in">
+          <section className="text-center space-y-4">
+            <h1 className="text-4xl font-bold text-primary">IELTS Reading</h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Test your ability to read and understand academic texts with various question types.
+            </p>
+          </section>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="hover:shadow-lg transition-shadow animate-slide-up">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Clock className="h-5 w-5 text-primary" />
+                  Time and Questions
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li>• Total time: 60 minutes</li>
+                  <li>• 40 questions across 3 passages</li>
+                  <li>• About 20 minutes per passage</li>
+                  <li>• No extra time for transferring answers</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow animate-slide-up">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <List className="h-5 w-5 text-primary" />
+                  Question Types
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  <li>• Multiple choice</li>
+                  <li>• True/False/Not Given</li>
+                  <li>• Matching headings</li>
+                  <li>• Summary completion</li>
+                  <li>• Sentence completion</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow md:col-span-2 animate-slide-up">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Info className="h-5 w-5 text-primary" />
+                  Tips for Success
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <CardDescription className="font-semibold mb-2">Time Management</CardDescription>
+                  <ul className="space-y-2">
+                    <li>• Skim read passages first</li>
+                    <li>• Spend max 20 minutes per passage</li>
+                    <li>• Leave time to transfer answers</li>
+                  </ul>
+                </div>
+                <div>
+                  <CardDescription className="font-semibold mb-2">Reading Strategies</CardDescription>
+                  <ul className="space-y-2">
+                    <li>• Read questions before detailed reading</li>
+                    <li>• Underline key words in questions</li>
+                    <li>• Practice scanning for specific information</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Reading;

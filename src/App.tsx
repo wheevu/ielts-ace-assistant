@@ -8,6 +8,10 @@ import Index from "./pages/Index";
 import GrammarCheck from "./pages/GrammarCheck";
 import PracticeTests from "./pages/PracticeTests";
 import PracticeTest from "./pages/PracticeTest";
+import Reading from "./pages/Reading";
+import Writing from "./pages/Writing";
+import Speaking from "./pages/Speaking";
+import Listening from "./pages/Listening";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +26,10 @@ const App = () => (
           <Route path="/grammar-check" element={<GrammarCheck />} />
           <Route path="/practice-tests" element={<PracticeTests />} />
           <Route path="/practice-test/:id" element={<PracticeTest />} />
+          <Route path="/ielts/reading" element={<Reading />} />
+          <Route path="/ielts/writing" element={<Writing />} />
+          <Route path="/ielts/speaking" element={<Speaking />} />
+          <Route path="/ielts/listening" element={<Listening />} />
         </Routes>
       </BrowserRouter>
       <ChatButton />
