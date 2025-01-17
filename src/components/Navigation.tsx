@@ -19,7 +19,7 @@ export const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link to="#features" className="text-gray-700 hover:text-primary transition-colors">Features</Link>
-            <Link to="#practice" className="text-gray-700 hover:text-primary transition-colors">Practice Tests</Link>
+            <Link to="/practice-tests" className="text-gray-700 hover:text-primary transition-colors">Practice Tests</Link>
             <Link to="/grammar-check" className="text-gray-700 hover:text-primary transition-colors flex items-center gap-1">
               <SpellCheck className="h-4 w-4" />
               Grammar Check
@@ -63,7 +63,7 @@ export const Navigation = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="#features" className="block px-3 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100">Features</Link>
-            <Link to="#practice" className="block px-3 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100">Practice Tests</Link>
+            <Link to="/practice-tests" className="block px-3 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100">Practice Tests</Link>
             <Link to="/grammar-check" className="block px-3 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100">Grammar Check</Link>
             <Link to="/vocabulary" className="block px-3 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100">Vocabulary</Link>
             <Link to="/ielts/reading" className="block px-3 py-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 ml-4">IELTS Reading</Link>
