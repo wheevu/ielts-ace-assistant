@@ -25,7 +25,6 @@ const GrammarCheck = () => {
 
     setIsChecking(true);
     // TODO: Implement actual grammar checking logic
-    // This is a mock implementation
     setTimeout(() => {
       setCorrections([
         {
@@ -41,7 +40,7 @@ const GrammarCheck = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navigation />
-      <div className="container mx-auto px-4 py-8 flex-grow animate-fade-in">
+      <div className="container mx-auto px-4 py-8 flex-grow pt-24 animate-fade-in">
         <Card className="max-w-4xl mx-auto">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
