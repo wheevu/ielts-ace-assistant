@@ -75,7 +75,9 @@ export const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Button variant="ghost">Sign In</Button>
+            <Link to="/sign-in">
+              <Button variant="ghost">Sign In</Button>
+            </Link>
             <Button>Get Started</Button>
           </div>
         </div>

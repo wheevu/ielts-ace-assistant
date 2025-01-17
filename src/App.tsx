@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import Index from "./pages/Index";
+import SignIn from "./pages/SignIn";
 import GrammarCheck from "./pages/GrammarCheck";
 import PracticeTests from "./pages/PracticeTests";
 import PracticeTest from "./pages/PracticeTest";
@@ -24,6 +25,7 @@ const App = () => (
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/sign-in" element={<SignIn />} />
             <Route path="/grammar-check" element={<GrammarCheck />} />
             <Route path="/practice-tests" element={<PracticeTests />} />
             <Route path="/practice-test/:id" element={<PracticeTest />} />
