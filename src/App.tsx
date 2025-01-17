@@ -12,6 +12,8 @@ import Reading from "./pages/Reading";
 import Writing from "./pages/Writing";
 import Speaking from "./pages/Speaking";
 import Listening from "./pages/Listening";
+import Vocabulary from "./pages/Vocabulary";
+import VocabularyTopic from "./pages/VocabularyTopic";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/ielts/writing" element={<Writing />} />
           <Route path="/ielts/speaking" element={<Speaking />} />
           <Route path="/ielts/listening" element={<Listening />} />
+          <Route path="/vocabulary" element={<Vocabulary />} />
+          <Route path="/vocabulary/:topic" element={<VocabularyTopic />} />
         </Routes>
       </BrowserRouter>
       <ChatButton />
