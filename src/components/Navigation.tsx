@@ -18,7 +18,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="text-xl font-bold">IELTS Practice</Link>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <Link to="/vocabulary">
               <Button variant="ghost">
                 <BookOpen className="mr-2 h-4 w-4" />
@@ -26,6 +26,14 @@ export const Navigation = () => {
               </Button>
             </Link>
             
+            <Link to="/grammar-check">
+              <Button variant="ghost">Grammar Check</Button>
+            </Link>
+
+            <Link to="/practice-tests">
+              <Button variant="ghost">Practice Tests</Button>
+            </Link>
+
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost">
@@ -48,13 +56,6 @@ export const Navigation = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
-            <Link to="/grammar-check">
-              <Button variant="ghost">Grammar Check</Button>
-            </Link>
-            <Link to="/practice-tests">
-              <Button variant="ghost">Practice Tests</Button>
-            </Link>
           </div>
 
           <div className="flex items-center gap-4">
